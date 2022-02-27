@@ -1,8 +1,7 @@
 :root {
     --blue: #1a73e8;
     --hover-blue: #2b7de9;
-    --active-blue: #256dca;
-    --focus-blue: #165fbe;
+    --focus-blue: #256dca;
 }
 
 * {
@@ -45,19 +44,17 @@ h1 {
     
     font-size: 1rem;
     cursor: pointer;
+    transition: box-shadow .1s ease-in-out;
 }
 
 .speak:hover {
     background: var(--hover-blue);
 }
 
-.speak:active {
-    background: var(--active-blue);
-}
-
 .speak:focus {
     background: var(--focus-blue);
     outline: none;
+    box-shadow: 0 0 0 3px #2b7de98c;
 }
 
 
