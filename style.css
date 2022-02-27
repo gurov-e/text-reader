@@ -1,0 +1,103 @@
+:root {
+    --blue: #1a73e8;
+    --hover-blue: #2b7de9;
+    --active-blue: #256dca;
+    --focus-blue: #165fbe;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 10px 8px;
+    max-width: 100%; min-height: 100%;
+
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 0.67em 0;
+}
+
+.message {
+    display: block;
+    min-width: 100%; max-width: 100%;
+    min-height: 400px; max-height: 600px;
+    padding: .3em;
+    margin-bottom: 15px;
+
+    font-family: monospace;
+    font-size: 1rem;
+
+    border: 1px dashed #000;
+}
+
+.speak {
+    padding: 0.5em 1em;
+    margin-bottom: 10px;
+
+    background: var(--blue);
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0.2em;
+    
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.speak:hover {
+    background: var(--hover-blue);
+}
+
+.speak:active {
+    background: var(--active-blue);
+}
+
+.speak:focus {
+    background: var(--focus-blue);
+    outline: none;
+}
+
+
+@media screen and (min-width: 2560px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .message {
+        font-size: 1.5rem;
+    }
+
+    .speak {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        min-height: 300px;
+    }
+
+    .speak {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
