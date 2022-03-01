@@ -54,7 +54,7 @@ h1 {
 .speak:focus {
     background: var(--focus-blue);
     outline: none;
-    box-shadow: 0 0 0 3px #2b7de98c;
+    box-shadow: 0 0 0 3px rgba(43, 125, 233, 0.48);
 }
 
 
