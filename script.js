@@ -25,10 +25,6 @@ btnSpeak.addEventListener('click', () => {
 })
 
 txtMessage.addEventListener('keydown', (e) => {
-    if (e.shiftKey && e.code === 'Enter') {
-        e.preventDefault()
-        txtMessage.value += '\n'
-    }
     if (e.code === 'Enter' && txtMessage.value && !e.shiftKey) {
         e.preventDefault()
         speak(txtMessage.value)
