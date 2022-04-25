@@ -46,12 +46,16 @@ form.addEventListener('keydown', (e) => {
     if (messageIdx >= -1 && messageIdx < messages.length - 1) {
       messageIdx = messages.length - 1
     }
-    txtMessage.value = messages[messageIdx]
+    if (messages.length !== 0) {
+      txtMessage.value = messages[messageIdx]
+    }
   }
   if (e.code === 'ArrowDown') {
     if (messageIdx < messages.length && messageIdx >= 1) {
       messageIdx--
     }
-    txtMessage.value = messages[messageIdx]
+    if (messages.length !== 0) {
+      txtMessage.value = messages[messageIdx]
+    }
   }
 })
