@@ -25,14 +25,16 @@ function clear() {
 btnSpeak.addEventListener('click', () => {
   speak(txtMessage.value)
   messages.push(txtMessage.value)
+  messageIdx = -1
   clear()
 })
 
 txtMessage.addEventListener('keydown', (e) => {
-  if (e.code === 'Enter' && txtMessage.value && !e.shiftKey) {
+  if (e.keyCode === 13 && txtMessage.value && !e.shiftKey) {
     e.preventDefault()
     speak(txtMessage.value)
     messages.push(txtMessage.value)
+    messageIdx = -1
     clear()
   }
 })
@@ -44,7 +46,7 @@ form.addEventListener('submit', (e) => {
 form.addEventListener('keydown', (e) => {
   if (e.code === 'ArrowUp') {
     if (messageIdx >= -1 && messageIdx < messages.length - 1) {
-      messageIdx = messages.length - 1
+      messageIdx++
     }
     if (messages.length !== 0) {
       txtMessage.value = messages[messageIdx]
